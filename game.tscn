@@ -1,9 +1,84 @@
 [gd_scene format=3 uid="uid://b3057w55uqkd3"]
 
-[node name="Game" type="Node2D" unique_id=1723150197]
-
-[node name="Control" type="Control" parent="." unique_id=2121957674]
+[node name="Game" type="Control" unique_id=2012837561]
 layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=982449853]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1103172964]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TopBar" type="PanelContainer" parent="VBoxContainer" unique_id=1713151036]
+custom_minimum_size = Vector2(0, 64)
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/TopBar" unique_id=669137764]
+layout_mode = 2
+
+[node name="TopHBoxContainer" type="HBoxContainer" parent="VBoxContainer/TopBar/VBoxContainer" unique_id=2091671715]
+layout_mode = 2
+theme_override_constants/separation = 32
+alignment = 1
+
+[node name="DistanceLabel" type="Label" parent="VBoxContainer/TopBar/VBoxContainer/TopHBoxContainer" unique_id=1842534295]
+layout_mode = 2
+text = "Distance: "
+
+[node name="MPHLabel" type="Label" parent="VBoxContainer/TopBar/VBoxContainer/TopHBoxContainer" unique_id=705146738]
+layout_mode = 2
+text = "MPH: "
+
+[node name="BottomHBoxContainer" type="HBoxContainer" parent="VBoxContainer/TopBar/VBoxContainer" unique_id=948491796]
+layout_mode = 2
+theme_override_constants/separation = 32
+
+[node name="CrewMatesLabel" type="Label" parent="VBoxContainer/TopBar/VBoxContainer/BottomHBoxContainer" unique_id=749043283]
+layout_mode = 2
+text = "Crewmates: "
+
+[node name="FuelLabel" type="Label" parent="VBoxContainer/TopBar/VBoxContainer/BottomHBoxContainer" unique_id=112462940]
+layout_mode = 2
+text = "Fuel: "
+
+[node name="MainBody" type="HBoxContainer" parent="VBoxContainer" unique_id=1291460461]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="GameViewport" type="Control" parent="VBoxContainer/MainBody" unique_id=486052013]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 2.0
+
+[node name="ColorRect" type="ColorRect" parent="VBoxContainer/MainBody/GameViewport" unique_id=420508316]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Sidebar" type="PanelContainer" parent="VBoxContainer/MainBody" unique_id=1967735378]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/MainBody/Sidebar" unique_id=1544514241]
+layout_mode = 2
