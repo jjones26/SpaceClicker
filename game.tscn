@@ -79,6 +79,3 @@ color = Color(0, 0, 0, 1)
 [node name="Sidebar" type="PanelContainer" parent="VBoxContainer/MainBody" unique_id=1967735378]
 layout_mode = 2
 size_flags_horizontal = 3
-
-[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/MainBody/Sidebar" unique_id=1544514241]
-layout_mode = 2
